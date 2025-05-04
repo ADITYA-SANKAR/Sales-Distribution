@@ -1,5 +1,3 @@
-# Sales-Distribution
-Sales Distribution Pie Chart Code
 # Sample data for sales distribution across products
 labels = ['Product A', 'Product B', 'Product C', 'Product D']
 sizes = [35, 25, 25, 15]
