@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Generate sample data for demonstration
+dates = pd.date_range(start='2025-01-01', periods=12, freq='M')
+actual_sales = [120, 150, 180, 170, 190, 220, 210, 230, 250, 240, 260, 280]
+predicted_sales = [130, 145, 175, 160, 195, 215, 205, 225, 255, 245, 265, 275]
+
+# Set up the plot
+plt.figure(figsize=(10, 5))
+plt.plot(dates, actual_sales, marker='o', linestyle='-', color='blue', label='Actual Sales')
+plt.plot(dates, predicted_sales, marker='o', linestyle='--', color='green', label='Predicted Sales')
+
+# Add title and axis labels
+plt.title("Sales Forecast vs. Actual Sales", fontsize=16)
+plt.xlabel("Date", fontsize=12)
+plt.ylabel("Sales", fontsize=12)
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the figure to the repository (for example, as forecast_trend.png)
+plt.savefig('forecast_trend.png')
+plt.show()
