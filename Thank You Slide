@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a gradient background
+fig, ax = plt.subplots(figsize=(10, 7))
+# Generate a 2D array with a gradient effect
+gradient = np.linspace(0, 1, 256)
+gradient = np.vstack((gradient, gradient))
+
+# Display the gradient using a modern colormap
+ax.imshow(gradient, aspect='auto', cmap='plasma', extent=[0, 10, 0, 7])
+plt.axis('off')  # Hide axes
+
+# Overlay the "Thank You!" text
+plt.text(5, 3.5, "Thank You!", fontsize=50, fontweight='bold', color='white',
+         ha='center', va='center', family='sans-serif')
+
+# Save the image file to include in your presentation or GitHub repository
+plt.savefig('thank_you_slide.png', bbox_inches='tight', pad_inches=0.1)
+plt.show()
